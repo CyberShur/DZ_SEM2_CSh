@@ -4,9 +4,9 @@
 
 int Number = new Random().Next(1, 3);
 Console.WriteLine("Я хочу сыграть в игру. Тут загадано число от 1 до 2. Угадаешь его за три попытки?");
+
 int Gamer = 0; 
 int count = 0;
-
 
 while(Gamer != Number)
 {
@@ -23,8 +23,7 @@ while(Gamer != Number)
     }
     else
     {
-        Console.WriteLine("Увы. Вы не угадали. Попытки закончились");
+        Console.WriteLine("Увы. Вы не угадали. Попытки закончились.");
         break;
     }
-
 }
