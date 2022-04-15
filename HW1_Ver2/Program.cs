@@ -1,21 +1,36 @@
-﻿// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+﻿// Задача 10: Напишите программу, которая принимает на вход трёхзначное число и 
+// на выходе показывает вторую цифру этого числа.
 // 456 -> 5
 // 782 -> 8
 // 918 -> 1
 
-Console.Write("Введите трёхзначное число: ");
-int Number = Convert.ToInt32(Console.ReadLine());
-string Numbers = Convert.ToString(Number); 
+string Number = newNumber();
+string Result = Definition(Number);
+Console.Write(Result);
 
-if (Numbers.Length < 3)
+string newNumber()
 {
-    Console.Write("Число не трёхзначное");
+    Console.Write("Введите трёхзначное число: ");
+    string Number = Console.ReadLine();
+    Convert.ToInt32(Number);
+    return Number;
 }
-else if (Numbers.Length == 3)
+
+
+string Definition(string Number)
 {
-    Console.Write("Второе число - " + Numbers[1]);
-}
-else
-{
-    Console.Write("Число не трёхзначное");
+    string Result;
+    if (Number.Length < 3)
+    {
+        Result = "Число не трёхзначное";
+    }
+    else if (Number.Length == 3)
+    {
+        Result = "Второе число - " + Number[1];
+    }
+    else
+    {
+        Result = "Число не трёхзначное";
+    }
+    return Result;
 }
