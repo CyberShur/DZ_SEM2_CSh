@@ -10,10 +10,10 @@ Console.WriteLine(Result);
 
 string InputNumber()
 {
-Console.Write("Введите число: ");
-string Number = Console.ReadLine();
-Convert.ToInt32(Number);
-return Number;
+    Console.Write("Введите число: ");
+    string Number = Console.ReadLine();
+    Convert.ToInt32(Number);
+    return Number;
 }
 
 string Examination(string Number)
