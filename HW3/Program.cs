@@ -7,13 +7,16 @@ Console.Write("Введите порядковый номер дня недел�
 int Number = Convert.ToInt32(Console.ReadLine());
 
 
-if(Number > 5)
+if(Number < 6)
 {
-     Console.Write("Это выходной день");
+    Console.Write("Нет");
+}
+else if (Number < 8)
+{
+    Console.Write("Да");
 }
 else
 {
-    Console.Write("Это будний день");
+    Console.Write("Неверный порядковый номер дня недели");
 }
 
-// Console.Write("Неверный порядковый номер дня недели");
