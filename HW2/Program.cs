@@ -14,5 +14,5 @@ if (Number.Length < 3)
 }
 else
 {
-    Console.Write("Третье число " + Number[2]);
+    Console.Write("Третье число - " + Number[2]);
 }
