@@ -2,8 +2,8 @@
 // больше загаданное число или меньше
 // Доп. задача с усложнением: на отгадывание дается 3 попытки.
 
-int Number = new Random().Next(1, 3);
-Console.WriteLine("Я хочу сыграть в игру. Тут загадано число от 1 до 2. Угадаешь его за три попытки?");
+int Number = new Random().Next(1, 10);
+Console.WriteLine("Я хочу сыграть в игру. Тут загадано число от 1 до 9. Угадаете его за три попытки?");
 
 int Gamer = 0; 
 int count = 0;
@@ -18,7 +18,7 @@ while(Gamer != Number)
     }
     else if (count < 2)
     {
-        Console.WriteLine("Увы! Попробуй ещё раз!");
+        Console.WriteLine("Увы! Попробуйте ещё раз!");
         count++;
     }
     else
