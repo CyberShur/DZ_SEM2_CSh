@@ -1,27 +1,30 @@
-﻿// Доп. задача: Игра угадайка. Программа загадывает случайное число. Пользователь его угадывает. Если пользователь дает неправильный ответ, то программа сообщает, больше загаданное число или меньше
+﻿// Доп. задача: Игра угадайка. Программа загадывает случайное число. Пользователь его угадывает. Если пользователь дает неправильный ответ, то программа сообщает, 
+// больше загаданное число или меньше
 // Доп. задача с усложнением: на отгадывание дается 3 попытки.
 
-int Number = new Random().Next(1, 11);
-int Gamer = Convert.ToInt32(Console.ReadLine());
+int Number = new Random().Next(1, 3);
+Console.WriteLine("Я хочу сыграть в игру. Тут загадано число от 1 до 2. Угадаешь его за три попытки?");
+int Gamer = 0; 
+int count = 0;
 
 
-while (Gamer != Number)
+while(Gamer != Number)
 {
-    Console.Write("Увы! Попробуй ещё раз!");
-    int Gamer = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите число: ");
+    Gamer = Convert.ToInt32(Console.ReadLine());
+    if(Gamer == Number)
+    {
+        Console.Write("Ваша интуиция вас не подвела! Это число: " + Number);
+    }
+    else if (count < 2)
+    {
+        Console.WriteLine("Увы! Попробуй ещё раз!");
+        count++;
+    }
+    else
+    {
+        Console.WriteLine("Увы. Вы не угадали. Попытки закончились");
+        break;
+    }
+
 }
-Console.Write("Ваша интуиция вас не подвела! Это число: ");
-
-
-
-// if(Gamer == Number)
-// {
-//    Console.Write("Ваша интуиция вас не подвела! Это число: ");
-//}
-//else
-//{
-//    Console.Write("Увы! Попробуй ещё раз!");
-//}
-
-
-// Console.Write(Number);
