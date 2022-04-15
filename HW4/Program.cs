@@ -18,12 +18,20 @@ while(Gamer != Number)
     }
     else if (count < 2)
     {
-        Console.WriteLine("Увы! Попробуйте ещё раз!");
+        Console.WriteLine("Мимо!");
+        if(Gamer > Number)
+        {
+            Console.WriteLine("Ваше число больше того, что я загадал");
+        }
+        else
+        {
+            Console.WriteLine("Ваше число меньше того, что я загадал");
+        }    
         count++;
     }
     else
     {
-        Console.WriteLine("Увы. Вы не угадали. Попытки закончились.");
+        Console.WriteLine("Попытки закончились. Вы проиграли!");
         break;
     }
 }
