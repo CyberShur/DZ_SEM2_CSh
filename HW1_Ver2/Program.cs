@@ -16,7 +16,6 @@ string newNumber()
     return Number;
 }
 
-
 string Definition(string Number)
 {
     string Result;
